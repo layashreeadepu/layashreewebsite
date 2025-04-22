@@ -1,0 +1,146 @@
+"use client"
+
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+}
+
+interface ExperienceItem {
+  title: string
+  company: string
+  location: string
+  period: string
+  description: string[]
+  skills: string[]
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    title: "Data Engineer II",
+    company: "Tata Consultancy Services",
+    location: "Mumbai, India",
+    period: "Feb 2022 - Aug 2023",
+    description: [
+      "Automated financial transaction data processing using Python scripts, improving integration speed by 20%.",
+      "Built and optimized ETL pipelines using Talend, Hive, and Hadoop, cutting data processing time by 50%.",
+      "Automated 100+ ETL workflows with TAC, improving resource utilization and operational efficiency by 15%.",
+      "Managed large-scale datasets comprising 600+ tables by leveraging SQL for efficient data handling and processing.",
+      "Improved data quality to 95% by developing custom data cleaning and validation using standardization techniques.",
+      "Transitioned from legacy systems to big data technologies, increasing efficiency and achieving a 20% cost savings.",
+      "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%.",
+      "Led a team of 5 engineers in successfully migrating a critical module from test to production for the client."
+    ],
+    skills: ["Python", "ETL", "Talend", "SQL", "Hadoop", "Hive"]
+  },
+  {
+    title: "Data Analyst/Engineer I",
+    company: "Tata Consultancy Services",
+    location: "Mumbai, India",
+    period: "Jan 2021 - Feb 2022",
+    description: [
+      "Migrated healthcare data to AWS Redshift and S3, reducing data storage costs by 30% and improving performance.",
+      "Built scalable ETL pipelines with AWS Glue & Redshift, optimizing data integration for analytics by 30%.",
+      "Worked with cross-functional teams to streamline healthcare supply chain processes, improving efficiency by 15%.",
+      "Automated compliance workflows using SQL & AWS Lambda for data validation, reducing manual efforts by 40%."
+    ],
+    skills: ["AWS", "Redshift", "ETL", "SQL", "AWS Lambda", "AWS Glue"]
+  }
+]
+
+export function ExperienceSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
+
+  return (
+    <section id="experience" className="py-20">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          className="section-heading text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+        >
+          Professional Experience
+        </motion.h2>
+
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="relative"
+        >
+          {/* Timeline line */}
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/80 via-primary/40 to-transparent z-0 hidden md:block" />
+
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className={`flex flex-col md:flex-row items-center md:items-start mb-12 md:mb-16 relative ${
+                index % 2 === 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Timeline dot */}
+              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-5 h-5 rounded-full bg-primary z-10 hidden md:block" />
+
+              {/* Content wrapper */}
+              <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
+                <Card className="card-hover border-primary/10 overflow-hidden">
+                  <div className="h-1 w-full bg-gradient-to-r from-violet-500 to-indigo-500" />
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start flex-wrap">
+                      <div>
+                        <h3 className="text-xl font-bold">{exp.title}</h3>
+                        <h4 className="text-lg font-medium text-primary">{exp.company}</h4>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-muted-foreground">{exp.location}</p>
+                        <p className="text-sm text-muted-foreground">{exp.period}</p>
+                      </div>
+                    </div>
+
+                    <ul className="mt-4 space-y-2">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-primary mr-2 mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {exp.skills.map((skill, i) => (
+                        <Badge key={i} variant="secondary" className="bg-primary/10">{skill}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}

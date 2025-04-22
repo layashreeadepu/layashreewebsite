@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 20% 4%;
+    --foreground: 250 20% 98%;
+    --card: 250 20% 6%;
+    --card-foreground: 250 20% 98%;
+    --popover: 250 20% 6%;
+    --popover-foreground: 250 20% 98%;
+    --primary: 270 95% 75%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 240 30% 15%;
+    --secondary-foreground: 250 20% 98%;
+    --muted: 240 30% 15%;
+    --muted-foreground: 250 20% 60%;
+    --accent: 240 30% 15%;
+    --accent-foreground: 250 20% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 250 20% 98%;
+    --border: 240 30% 20%;
+    --input: 240 30% 20%;
+    --ring: 270 95% 75%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    cursor: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom cursor styles */
+.cursor-dot,
+.cursor-outline {
+  @apply fixed top-0 left-0 rounded-full pointer-events-none z-50 mix-blend-difference;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  @apply w-2 h-2 bg-primary-foreground;
+}
+
+.cursor-outline {
+  @apply w-8 h-8 border border-primary-foreground;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-indigo-400;
+  }
+
+  .nav-item {
+    @apply relative transition-all duration-300 hover:text-primary;
+  }
+
+  .nav-item::after {
+    @apply content-[''] absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-item:hover::after {
+    @apply w-full;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-gradient;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+}
