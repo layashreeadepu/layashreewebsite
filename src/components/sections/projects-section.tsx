@@ -1,5 +1,6 @@
 "use client"
 
+import { Link } from "lucide-react"
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -16,6 +17,7 @@ interface Project {
   image: string
   skills: string[]
   tools: string[]
+  githubUrl?: string
 }
 
 const projects: Project[] = [
@@ -30,6 +32,7 @@ const projects: Project[] = [
       "Created a system with tables, triggers, functions, and indexes for fast data retrieval and transaction processing."
     ],
     image: "/images/project-organ.jpg",
+    githubUrl: "https://github.com/yourusername/organ-donation-db",
     skills: ["Database Design", "SQL", "Optimization", "Healthcare"],
     tools: ["MS SQL Server", "Power BI"]
   },
@@ -44,6 +47,7 @@ const projects: Project[] = [
       "Implemented interactive visualizations to track performance metrics, medal counts, and athlete statistics."
     ],
     image: "/images/project-olympics.jpg",
+    githubUrl: "https://github.com/https://github.com/layashreeadepu/Tokyo-Olympics-Data-Engineering-Project/organ-donation-db",
     skills: ["Data Pipeline", "ETL", "Analytics", "Cloud Computing"],
     tools: ["Microsoft Azure", "PowerBI", "Data Lake", "DataBricks"]
   },
@@ -58,6 +62,7 @@ const projects: Project[] = [
       "Created an interactive Tableau dashboard enabling users to explore relationships between different metrics and overall happiness scores."
     ],
     image: "/images/project-happiness.jpg",
+    githubUrl: "https://github.com/https://github.com",
     skills: ["Data Visualization", "Predictive Analytics", "Data Collection"],
     tools: ["Tableau", "Data Collection"]
   },
@@ -72,6 +77,7 @@ const projects: Project[] = [
       "Implemented analytics dashboards to track engagement metrics and connection success rates."
     ],
     image: "/images/project-facelink.jpg",
+    githubUrl: "https://github.com/layashreeadepu/Face-Link-Connect",
     skills: ["Product Management", "Market Research", "Team Leadership"],
     tools: ["KPI Tracking", "Requirements Documentation"]
   }
@@ -156,6 +162,25 @@ export function ProjectsSection() {
                       {project.shortDescription}
                     </SheetDescription>
                   </SheetHeader>
+                  {project.githubUrl && (
+  <div className="mt-6">
+    <Button
+      asChild
+      className="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white hover:from-gray-800 hover:to-gray-700 px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl ring-2 ring-gray-900"
+    >
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2"
+      >
+        <Link className="h-5 w-5" />
+        View on GitHub
+      </a>
+    </Button>
+  </div>
+)}
+
                   <div className="mt-6">
                     <h3 className="text-lg font-medium mb-2">Project Details</h3>
                     <ul className="space-y-2 mb-6">
@@ -188,6 +213,7 @@ export function ProjectsSection() {
                         ))}
                       </div>
                     </div>
+                    
                   </div>
                 </SheetContent>
               </Sheet>
