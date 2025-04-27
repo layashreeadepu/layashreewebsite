@@ -43,10 +43,49 @@
 }
 
 /* Custom cursor styles */
-.cursor-dot,
-.cursor-outline {
-  @apply fixed top-0 left-0 rounded-full pointer-events-none z-50 mix-blend-difference;
+/* Add this to your global.css file */
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, rgb(140, 90, 250), rgb(124, 58, 237));
+  border-radius: 50%;
+  pointer-events: none;
   transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(140, 90, 250, 0.5);
+}
+
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(140, 90, 250, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: border-color 0.3s ease;
+}
+
+/* Make sure standard cursor is hidden when custom cursor is active */
+body {
+  cursor: none;
+}
+
+/* Show regular cursors on all interactive elements */
+a, button, .interactive-item, input, textarea, select, [role="button"] {
+  cursor: pointer !important;
+}
+
+/* Disable canvas interactions with pointer */
+canvas {
+  pointer-events: none !important;
 }
 
 .cursor-dot {
@@ -97,8 +136,32 @@
   body {
     cursor: auto;
   }
-  .cursor-dot,
-  .cursor-outline {
-    display: none;
-  }
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, rgb(140, 90, 250), rgb(124, 58, 237));
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(140, 90, 250, 0.5);
+}
+  
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(140, 90, 250, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: border-color 0.3s ease;
+}
+
 }

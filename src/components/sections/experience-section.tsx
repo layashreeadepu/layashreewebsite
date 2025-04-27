@@ -65,7 +65,7 @@ const experiences: ExperienceItem[] = [
     title: "Operations Analyst",
     company: "IST management",
     location: "Boston, MA, US",
-    period: "Jan 2021 - Feb 2022",
+    period: "Aug 2024 - Apr 2025",
     description: [
     "Addressed 50+ service inquiries daily, resolved delivery issues efficiently, boosting satisfaction scores",
     "Managed data entry in high-volume environment, inputting 500+ records daily, cutting tracking errors by 30%",
