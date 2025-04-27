@@ -41,15 +41,6 @@ const experiences: ExperienceItem[] = [
     location: "Mumbai, India",
     period: "Jan 2021 - Aug 2023",
     description: [
-      // "Automated financial transaction data processing using Python scripts, improving integration speed by 20%.",
-      // "Built and optimized ETL pipelines using Talend, Hive, and Hadoop, cutting data processing time by 50%.",
-      // "Automated 100+ ETL workflows with TAC, improving resource utilization and operational efficiency by 15%.",
-      // "Managed large-scale datasets comprising 600+ tables by leveraging SQL for efficient data handling and processing.",
-      // "Improved data quality to 95% by developing custom data cleaning and validation using standardization techniques.",
-      // "Transitioned from legacy systems to big data technologies, increasing efficiency and achieving a 20% cost savings.",
-      // "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%.",
-      // "Led a team of 5 engineers in successfully migrating a critical module from test to production for the client."
-
       "Delivered data-driven insights for regulatory audits and risk mitigation for a major financial sector client, enhancing compliance reporting efficiency by 30% through advanced data analysis and automated BI reporting frameworks",
       "Wrote Python scripts using pandas and statsmodels to perform ETL on unstructured PDF data tables into schema-aligned CSV/XLSX formats, enabling seamless Talend ingestion and accelerating readiness by 90%",
       "Developed standardised ETL pipelines for 100+ tables with Talend for Change Data Capture (SCD Type 2) across schemas, achieving 80% reduction in job-building time while improving data lineage tracking",
@@ -57,7 +48,7 @@ const experiences: ExperienceItem[] = [
       "Optimized complex analytical SQL queries on Impala/Hive processing 100M+ daily records while managing end-to-end table operations, resulting in 35% increased operational efficiency and 45% faster data validation",
       "Spearheaded sprint planning with customers & stakeholders using analytical metrics and preliminary CRM mapping, boosting workflow efficiency by 40% and reducing project deliverables timeline",
       "Authored 30+ Data Dictionaries & SOPs with detailed metadata analysis, standardising data definitions across teams and mitigating interpretation errors by 25% across all development environments",
-      "Received TCS ’Star of the Month’ Award for leading a cross-functional data migration initiative and mentoring 8 junior analysts, improving delivery velocity by 30% and standardising onboarding practices"
+      "Received TCS 'Star of the Month' Award for leading a cross-functional data migration initiative and mentoring 8 junior analysts, improving delivery velocity by 30% and standardising onboarding practices"
     ],
     skills: ["Python", "ETL", "Talend", "SQL", "Hadoop", "Hive"]
   },
@@ -65,7 +56,7 @@ const experiences: ExperienceItem[] = [
     title: "Operations Analyst",
     company: "IST management",
     location: "Boston, MA, US",
-    period: "Aug 2024 - Apr 2025",
+    period: "Jan 2021 - Feb 2022",
     description: [
     "Addressed 50+ service inquiries daily, resolved delivery issues efficiently, boosting satisfaction scores",
     "Managed data entry in high-volume environment, inputting 500+ records daily, cutting tracking errors by 30%",
@@ -100,55 +91,49 @@ export function ExperienceSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="relative"
+          className="max-w-5xl mx-auto"
         >
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/80 via-primary/40 to-transparent z-0 hidden md:block" />
-
+          {/* Single column layout */}
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`flex flex-col md:flex-row items-center md:items-start mb-12 md:mb-16 relative ${
-                index % 2 === 0 ? "md:flex-row-reverse" : ""
-              }`}
+              className="mb-12 relative"
             >
-              {/* Timeline dot */}
-              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-5 h-5 rounded-full bg-primary z-10 hidden md:block" />
-
-              {/* Content wrapper */}
-              <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
-                <Card className="card-hover border-primary/10 overflow-hidden">
-                  <div className="h-1 w-full bg-gradient-to-r from-violet-500 to-indigo-500" />
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start flex-wrap">
-                      <div>
-                        <h3 className="text-xl font-bold">{exp.title}</h3>
-                        <h4 className="text-lg font-medium text-primary">{exp.company}</h4>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-muted-foreground">{exp.location}</p>
-                        <p className="text-sm text-muted-foreground">{exp.period}</p>
-                      </div>
+              {/* Timeline dot and line */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/40 to-transparent z-0"></div>
+              <div className="absolute left-0 top-6 w-3 h-3 rounded-full bg-primary z-10 transform -translate-x-1/3"></div>
+              
+              <Card className="card-hover border-primary/10 overflow-hidden ml-8">
+                <div className="h-1 w-full bg-gradient-to-r from-violet-500 to-indigo-500"></div>
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start flex-wrap mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold">{exp.title}</h3>
+                      <h4 className="text-lg font-medium text-primary">{exp.company}</h4>
                     </div>
-
-                    <ul className="mt-4 space-y-2">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="text-primary mr-2 mt-1">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <Badge key={i} variant="secondary" className="bg-primary/10">{skill}</Badge>
-                      ))}
+                    <div className="text-right">
+                      <p className="text-muted-foreground">{exp.location}</p>
+                      <p className="text-sm text-muted-foreground">{exp.period}</p>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+
+                  <ul className="mt-4 space-y-2">
+                    {exp.description.map((item, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className="text-primary mr-2 mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {exp.skills.map((skill, i) => (
+                      <Badge key={i} variant="secondary" className="bg-primary/10">{skill}</Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>

@@ -116,7 +116,7 @@ export function ProjectsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.map((project) => (
             <motion.div key={project.id} variants={cardVariants}>
@@ -209,7 +209,6 @@ export function ProjectsSection() {
                         ))}
                       </div>
                     </div>
-
                   </div>
                 </SheetContent>
               </Sheet>
