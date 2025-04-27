@@ -4,9 +4,9 @@ import { useEffect, useState } from "react"
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [hidden, setHidden] = useState(true)
-  const [clicked, setClicked] = useState(true)
-  const [linkHovered, setLinkHovered] = useState(true)
+  const [hidden, setHidden] = useState(false)
+  const [clicked, setClicked] = useState(false)
+  const [linkHovered, setLinkHovered] = useState(false)
 
   useEffect(() => {
     // Only run on client
@@ -18,21 +18,21 @@ export function CustomCursor() {
     }
 
     const updatePosition = (e: MouseEvent) => {
-      setHidden(true)
+      setHidden(false)
       setPosition({ x: e.clientX, y: e.clientY })
     }
 
     const handleMouseDown = () => setClicked(true)
-    const handleMouseUp = () => setClicked(true)
+    const handleMouseUp = () => setClicked(false)
 
     const handleMouseEnterLink = () => setLinkHovered(true)
-    const handleMouseLeaveLink = () => setLinkHovered(true)
+    const handleMouseLeaveLink = () => setLinkHovered(false)
 
     window.addEventListener("mousemove", updatePosition)
     window.addEventListener("mousedown", handleMouseDown)
     window.addEventListener("mouseup", handleMouseUp)
     document.documentElement.addEventListener("mouseleave", () => setHidden(true))
-    document.documentElement.addEventListener("mouseenter", () => setHidden(true))
+    document.documentElement.addEventListener("mouseenter", () => setHidden(false))
 
     // Add event handlers for links and buttons
     const linkElements = document.querySelectorAll("a, button, .interactive-item")
@@ -46,7 +46,7 @@ export function CustomCursor() {
       window.removeEventListener("mousedown", handleMouseDown)
       window.removeEventListener("mouseup", handleMouseUp)
       document.documentElement.removeEventListener("mouseleave", () => setHidden(true))
-      document.documentElement.removeEventListener("mouseenter", () => setHidden(true))
+      document.documentElement.removeEventListener("mouseenter", () => setHidden(false))
 
       linkElements.forEach((link) => {
         link.removeEventListener("mouseenter", handleMouseEnterLink)
@@ -65,7 +65,7 @@ export function CustomCursor() {
               const linkElements = (node as Element).querySelectorAll("a, button, .interactive-item")
               linkElements.forEach((link) => {
                 link.addEventListener("mouseenter", () => setLinkHovered(true))
-                link.addEventListener("mouseleave", () => setLinkHovered(true))
+                link.addEventListener("mouseleave", () => setLinkHovered(false))
               })
             }
           })
