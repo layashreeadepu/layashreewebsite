@@ -77,7 +77,7 @@ export function Navigation() {
             ))}
             <Button asChild variant="default" className="interactive-item">
               <a
-                href="/LayashreeAdepu_Resume.pdf"
+                href="https://drive.google.com/drive/folders/1fBfzlFN5ZJA_FS9hV9fckmCoqtxKm6hy?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -124,7 +124,7 @@ export function Navigation() {
               ))}
               <Button asChild variant="default" className="interactive-item w-full mt-4">
                 <a
-                  href="/LayashreeAdepu_Resume.pdf"
+                  href="https://drive.google.com/drive/folders/1fBfzlFN5ZJA_FS9hV9fckmCoqtxKm6hy?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}

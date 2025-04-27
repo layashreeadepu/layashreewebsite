@@ -1,13 +1,12 @@
 "use client"
 
-import { Link } from "lucide-react"
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Link } from "lucide-react"
 
 interface Project {
   id: string
@@ -46,8 +45,8 @@ const projects: Project[] = [
       "Enhanced data quality by 25% using Azure DataBricks and improved decision-making with Power BI dashboards.",
       "Implemented interactive visualizations to track performance metrics, medal counts, and athlete statistics."
     ],
-    image: "/images/project-olympics.jpg",
-    githubUrl: "https://github.com/https://github.com/layashreeadepu/Tokyo-Olympics-Data-Engineering-Project/organ-donation-db",
+    image: "/images/layashree-photo-1.jpg",
+    githubUrl: "https://github.com/layashreeadepu/Tokyo-Olympics-Data-Engineering-Project",
     skills: ["Data Pipeline", "ETL", "Analytics", "Cloud Computing"],
     tools: ["Microsoft Azure", "PowerBI", "Data Lake", "DataBricks"]
   },
@@ -61,8 +60,8 @@ const projects: Project[] = [
       "Built predictive models to forecast happiness trends based on economic, social, and environmental factors.",
       "Created an interactive Tableau dashboard enabling users to explore relationships between different metrics and overall happiness scores."
     ],
-    image: "/images/project-happiness.jpg",
-    githubUrl: "https://github.com/https://github.com",
+    image: "/images/Region_Analysis_Dashboard.png",
+    githubUrl: "https://github.com/layashreeadepu",
     skills: ["Data Visualization", "Predictive Analytics", "Data Collection"],
     tools: ["Tableau", "Data Collection"]
   },
@@ -76,7 +75,7 @@ const projects: Project[] = [
       "Designed user journey maps and wireframes to optimize the networking experience at events.",
       "Implemented analytics dashboards to track engagement metrics and connection success rates."
     ],
-    image: "/images/project-facelink.jpg",
+    image: "/images/Testing.png",
     githubUrl: "https://github.com/layashreeadepu/Face-Link-Connect",
     skills: ["Product Management", "Market Research", "Team Leadership"],
     tools: ["KPI Tracking", "Requirements Documentation"]
@@ -88,9 +87,7 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
+    transition: { staggerChildren: 0.1 }
   }
 }
 
@@ -99,10 +96,7 @@ const cardVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
+    transition: { duration: 0.6, ease: "easeOut" }
   }
 }
 
@@ -128,19 +122,27 @@ export function ProjectsSection() {
             <motion.div key={project.id} variants={cardVariants}>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Card className="h-full card-hover cursor-pointer interactive-item overflow-hidden border-primary/10">
-                    <div className="h-1 w-full bg-gradient-to-r from-violet-500 to-indigo-500" />
+                  <Card className="h-full card-hover cursor-pointer overflow-hidden border-primary/10 shadow-lg hover:shadow-2xl transition">
+                    
+                    {/* Project Image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover"
+                    />
+
                     <CardHeader className="pb-1">
                       <div className="flex justify-between items-start">
                         <CardTitle className="text-xl mb-2 group">
                           {project.title}
-                          <ArrowUpRight className="inline-block ml-2 h-4 w-4 transition-transform" />
+                          <ArrowUpRight className="inline-block ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </CardTitle>
                       </div>
                       <CardDescription className="text-muted-foreground">
                         {project.shortDescription}
                       </CardDescription>
                     </CardHeader>
+
                     <CardContent>
                       <div className="flex flex-wrap gap-2 mt-3">
                         {project.skills.slice(0, 3).map((skill) => (
@@ -155,6 +157,7 @@ export function ProjectsSection() {
                     </CardContent>
                   </Card>
                 </SheetTrigger>
+
                 <SheetContent className="overflow-y-auto">
                   <SheetHeader>
                     <SheetTitle className="text-2xl">{project.title}</SheetTitle>
@@ -162,24 +165,17 @@ export function ProjectsSection() {
                       {project.shortDescription}
                     </SheetDescription>
                   </SheetHeader>
+
                   {project.githubUrl && (
-  <div className="mt-6">
-    <Button
-      asChild
-      className="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white hover:from-gray-800 hover:to-gray-700 px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl ring-2 ring-gray-900"
-    >
-      <a
-        href={project.githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2"
-      >
-        <Link className="h-5 w-5" />
-        View on GitHub
-      </a>
-    </Button>
-  </div>
-)}
+                    <div className="mt-6">
+                      <Button asChild className="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white px-6 py-3 rounded-xl">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                          <Link className="h-5 w-5" />
+                          View on GitHub
+                        </a>
+                      </Button>
+                    </div>
+                  )}
 
                   <div className="mt-6">
                     <h3 className="text-lg font-medium mb-2">Project Details</h3>
@@ -213,7 +209,7 @@ export function ProjectsSection() {
                         ))}
                       </div>
                     </div>
-                    
+
                   </div>
                 </SheetContent>
               </Sheet>

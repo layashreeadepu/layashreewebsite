@@ -39,29 +39,41 @@ const experiences: ExperienceItem[] = [
     title: "Data Engineer II",
     company: "Tata Consultancy Services",
     location: "Mumbai, India",
-    period: "Feb 2022 - Aug 2023",
+    period: "Jan 2021 - Aug 2023",
     description: [
-      "Automated financial transaction data processing using Python scripts, improving integration speed by 20%.",
-      "Built and optimized ETL pipelines using Talend, Hive, and Hadoop, cutting data processing time by 50%.",
-      "Automated 100+ ETL workflows with TAC, improving resource utilization and operational efficiency by 15%.",
-      "Managed large-scale datasets comprising 600+ tables by leveraging SQL for efficient data handling and processing.",
-      "Improved data quality to 95% by developing custom data cleaning and validation using standardization techniques.",
-      "Transitioned from legacy systems to big data technologies, increasing efficiency and achieving a 20% cost savings.",
-      "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%.",
-      "Led a team of 5 engineers in successfully migrating a critical module from test to production for the client."
+      // "Automated financial transaction data processing using Python scripts, improving integration speed by 20%.",
+      // "Built and optimized ETL pipelines using Talend, Hive, and Hadoop, cutting data processing time by 50%.",
+      // "Automated 100+ ETL workflows with TAC, improving resource utilization and operational efficiency by 15%.",
+      // "Managed large-scale datasets comprising 600+ tables by leveraging SQL for efficient data handling and processing.",
+      // "Improved data quality to 95% by developing custom data cleaning and validation using standardization techniques.",
+      // "Transitioned from legacy systems to big data technologies, increasing efficiency and achieving a 20% cost savings.",
+      // "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%.",
+      // "Led a team of 5 engineers in successfully migrating a critical module from test to production for the client."
+
+      "Delivered data-driven insights for regulatory audits and risk mitigation for a major financial sector client, enhancing compliance reporting efficiency by 30% through advanced data analysis and automated BI reporting frameworks",
+      "Wrote Python scripts using pandas and statsmodels to perform ETL on unstructured PDF data tables into schema-aligned CSV/XLSX formats, enabling seamless Talend ingestion and accelerating readiness by 90%",
+      "Developed standardised ETL pipelines for 100+ tables with Talend for Change Data Capture (SCD Type 2) across schemas, achieving 80% reduction in job-building time while improving data lineage tracking",
+      "Constructed scalable data pipelines for 600+ tables using Talend, implementing data validation checks while migrating diverse data sources including Oracle, MySQL, and JSON into Hive for unified business intelligence",
+      "Optimized complex analytical SQL queries on Impala/Hive processing 100M+ daily records while managing end-to-end table operations, resulting in 35% increased operational efficiency and 45% faster data validation",
+      "Spearheaded sprint planning with customers & stakeholders using analytical metrics and preliminary CRM mapping, boosting workflow efficiency by 40% and reducing project deliverables timeline",
+      "Authored 30+ Data Dictionaries & SOPs with detailed metadata analysis, standardising data definitions across teams and mitigating interpretation errors by 25% across all development environments",
+      "Received TCS ’Star of the Month’ Award for leading a cross-functional data migration initiative and mentoring 8 junior analysts, improving delivery velocity by 30% and standardising onboarding practices"
     ],
     skills: ["Python", "ETL", "Talend", "SQL", "Hadoop", "Hive"]
   },
   {
-    title: "Data Analyst/Engineer I",
-    company: "Tata Consultancy Services",
-    location: "Mumbai, India",
+    title: "Operations Analyst",
+    company: "IST management",
+    location: "Boston, MA, US",
     period: "Jan 2021 - Feb 2022",
     description: [
-      "Migrated healthcare data to AWS Redshift and S3, reducing data storage costs by 30% and improving performance.",
-      "Built scalable ETL pipelines with AWS Glue & Redshift, optimizing data integration for analytics by 30%.",
-      "Worked with cross-functional teams to streamline healthcare supply chain processes, improving efficiency by 15%.",
-      "Automated compliance workflows using SQL & AWS Lambda for data validation, reducing manual efforts by 40%."
+    "Addressed 50+ service inquiries daily, resolved delivery issues efficiently, boosting satisfaction scores",
+    "Managed data entry in high-volume environment, inputting 500+ records daily, cutting tracking errors by 30%",
+    "Coordinated with team to streamline dispatch to lockers, improving logistics flow, reducing locker wait time",
+    "Responded to communication issues, standardized package handling, info sharing, improving cross-shift efficiency",
+    "Identified inconsistencies in incoming mails, flagged and corrected them in real time, increasing tracking accuracy",
+    "Conducted informal audits of locker usage, reorganized dispatch schedule, enhancing locker availability and access",
+    "Ensured compliance with package handling standards, reducing error rates and supporting quality assurance"
     ],
     skills: ["AWS", "Redshift", "ETL", "SQL", "AWS Lambda", "AWS Glue"]
   }
