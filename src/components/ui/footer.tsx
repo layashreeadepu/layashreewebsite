@@ -38,7 +38,7 @@ export function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/layashree-adepu"
+              href="https://www.linkedin.com/in/layashreeadepu"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2 interactive-item"
@@ -47,7 +47,7 @@ export function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:adepu.l@northeastern.edu"
+              href="mailto:layashreeadepu1@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors p-2 interactive-item"
               aria-label="Email"
             >
