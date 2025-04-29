@@ -20,60 +20,72 @@ const skillsData: SkillCategory[] = [
   {
     category: "Programming Languages",
     skills: [
-      { name: "Python", description: "Data processing, machine learning, and automation scripts" },
-      { name: "SQL", description: "Complex queries, optimization, and database design" },
-      { name: "Java", description: "Enterprise application development" },
+      { name: "Python", description: "Advanced data processing, machine learning, ETL pipelines, and automation scripts" },
+      { name: "SQL", description: "Complex queries, performance optimization, stored procedures, and database design" },
     ]
   },
   {
     category: "Database Technologies",
     skills: [
-      { name: "AWS Glue", description: "ETL service for large-scale data processing and integration" },
-      { name: "MySQL", description: "Relational database for structured data storage and retrieval" },
-      { name: "Oracle DB", description: "Enterprise-grade database management system" },
-      { name: "PostgreSQL", description: "Open-source relational database with advanced features" },
-      { name: "HBase", description: "NoSQL database for large-scale distributed data storage" },
-      { name: "Hive", description: "Data warehouse infrastructure for summarizing and querying" },
+      { name: "AWS Glue", description: "ETL service for large-scale data processing and integration in cloud environments" },
+      { name: "MySQL", description: "Relational database management for transactional data and application backends" },
+      { name: "Oracle DB", description: "Enterprise-grade RDBMS for mission-critical applications and data warehousing" },
+      { name: "PostgreSQL", description: "Advanced open-source relational database with JSON support and extensions" },
+      { name: "MongoDB", description: "Document-oriented NoSQL database for flexible schema design and scalability" },
+      { name: "HBase", description: "Distributed NoSQL database for large-scale data storage on HDFS" },
+      { name: "Hive", description: "Data warehouse infrastructure for SQL-like querying and analysis on Hadoop" },
     ]
   },
   {
     category: "Data Engineering Tools",
     skills: [
-      { name: "Talend", description: "Data integration and ETL platform for enterprise data management" },
-      { name: "Airflow", description: "Workflow orchestration platform for scheduling data pipelines" },
-      { name: "Databricks", description: "Unified analytics platform for large-scale data processing" },
-      { name: "Git/ETL", description: "Version control and workflow management for ETL processes" },
-      { name: "Alteryx", description: "Analytics automation platform for data preparation and blending" }
+      { name: "Talend", description: "Enterprise data integration platform for ETL, data migration, and MDM" },
+      { name: "Apache Airflow", description: "Workflow orchestration platform for authoring, scheduling, and monitoring pipelines" },
+      { name: "Databricks", description: "Unified analytics platform combining data engineering, science, and business analytics" },
+      { name: "Apache Spark", description: "Distributed computing system for large-scale data processing and analytics" },
+      { name: "Git/GitFlow", description: "Version control and branching strategies for collaborative development" },
+      { name: "Alteryx", description: "Self-service analytics platform for data preparation and blending without coding" },
+      { name: "dbt", description: "Data transformation tool that enables analytics engineers to transform data in warehouses" }
     ]
   },
   {
     category: "Cloud Technologies",
     skills: [
-      { name: "AWS", description: "Cloud computing services for scalable data infrastructure" },
-      { name: "Azure", description: "Microsoft's cloud platform for analytics and machine learning" },
-      { name: "Data Factory", description: "Cloud-based data integration service for ETL workflows" },
-      { name: "Synapse Analytics", description: "Analytics service for big data and data warehousing" },
-      { name: "Databricks", description: "Unified platform for data engineering and machine learning" },
+      { name: "AWS", description: "Cloud computing platform with services for data storage, processing, and analytics" },
+      { name: "Azure", description: "Microsoft's cloud platform with integrated tools for data engineering and ML" },
+      { name: "Azure Data Factory", description: "Cloud-based ETL service for creating data integration and transformation workflows" },
+      { name: "Azure Synapse Analytics", description: "Analytics service unifying data integration, warehousing, and big data analytics" },
+      { name: "AWS Lambda", description: "Serverless computing service for running code without managing infrastructure" },
+      { name: "GCP BigQuery", description: "Google's serverless data warehouse for analytics at scale" },
+      { name: "Azure Databricks", description: "Apache Spark-based analytics platform optimized for Azure cloud" },
+      { name: "AWS S3", description: "Object storage service for scalable and secure data storage in the cloud" },
+      { name: "Azure Data Lake", description: "Distributed storage and analytics service for big data applications" }
     ]
   },
   {
     category: "Data Science & Analytics",
     skills: [
-      { name: "Classification", description: "Machine learning techniques for categorizing data points" },
-      { name: "Regression", description: "Statistical methods for modeling relationships between variables" },
-      { name: "Neural Networks", description: "Deep learning architectures for complex pattern recognition" },
-      { name: "Predictive Analytics", description: "Techniques for forecasting future outcomes based on historical data" },
-      { name: "Statistical Analytics", description: "Methods for analyzing and interpreting quantitative data" }
+      { name: "Machine Learning", description: "Development of algorithms that improve through experience and data" },
+      { name: "Statistical Analysis", description: "Application of statistical methods to extract insights from data" },
+      { name: "Predictive Modeling", description: "Techniques for forecasting outcomes using historical data patterns" },
+      { name: "Time Series Analysis", description: "Techniques for analyzing time-ordered data points for trends and patterns" },
+      { name: "A/B Testing", description: "Experimental framework for comparing variants to determine performance" },
+      { name: "Feature Engineering", description: "Process of selecting and transforming variables for model effectiveness" },
+      { name: "Cluster Analysis", description: "Technique for grouping similar objects based on their characteristics" },
+      { name: "Regression Analysis", description: "Statistical process for estimating relationships between variables" }
     ]
   },
   {
     category: "Visualization Tools",
     skills: [
-      { name: "Tableau", description: "Interactive data visualization software for business intelligence" },
-      { name: "Power BI", description: "Business analytics tool for interactive visualizations and reports" },
-      { name: "Visio", description: "Diagramming and vector graphics application for visual representations" },
-      { name: "Excel", description: "Spreadsheet program with data analysis and visualization capabilities" },
-      { name: "Looker", description: "Business intelligence platform for data exploration and dashboards" }
+      { name: "Tableau", description: "Business intelligence platform for interactive data visualization and dashboards" },
+      { name: "Power BI", description: "Microsoft's business analytics tool for visualization and sharing insights" },
+      { name: "Matplotlib", description: "Python plotting library for creating static, animated, and interactive visualizations" },
+      { name: "Plotly", description: "Interactive visualization library for Python, R, and JavaScript" },
+      { name: "Looker", description: "Business intelligence platform for exploring data and building dashboards" },
+      { name: "Excel", description: "Spreadsheet software with advanced analytics and visualization capabilities" },
+      { name: "Qlik Sense", description: "Data visualization tool for creating interactive applications and dashboards" },
+      { name: "Google Data Studio", description: "Free tool for converting data into customizable reports and dashboards" }
     ]
   }
 ]
