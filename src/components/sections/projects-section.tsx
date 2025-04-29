@@ -159,12 +159,29 @@ const projects: Project[] = [
       "Projects included analyzing large datasets, building DAX-based KPIs, and delivering compelling dashboards for business decisions.",
       "Certification involved hands-on labs and real-world case-based scenarios aligned with enterprise data analysis needs."
     ],
-    image: "/images/Credentials - layashreeadepu-7008 _ Microsoft Learn.jpggit push origin ", // You can customize this path
+    image: "/images/Credentials - LayashreeAdepu-7008 _ Microsoft Learn_page-0001.jpg", // You can customize this path
     githubUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LayashreeAdepu-7008/5D6B2FF8C129EAEE?sharingId=E191298D530BA3E5", // or link to your Credly badge
     skills: ["Data Visualization", "DAX", "Data Modeling", "Business Intelligence"],
     tools: ["Power BI", "Microsoft Excel", "DAX Studio", "Azure"],
     category: "Certification"
-  },{
+  },
+  {
+    id: "data-analytics-cert",
+    title: "Introduction to Data Analytics - IBM",
+    shortDescription: "Completed IBM's comprehensive data analytics course with 93.5% grade",
+    fullDescription: [
+      "Mastered fundamental data analytics concepts including key process steps, data structures, file formats, and data sources through IBM's industry-recognized program.",
+      "Developed clear understanding of data role distinctions between Data Engineer, Data Analyst, Data Scientist, and Business Intelligence Analyst positions.",
+      "Gained practical skills in the complete data analysis workflow: collecting, wrangling, mining, and visualizing data across multiple platforms.",
+      "Achieved excellence with a 93.5% final grade, demonstrating proficiency in databases, spreadsheets, data visualization, Python, SQL, and Microsoft Excel."
+    ],
+    image: "/images/Coursera YVC4F26VTTC4_page-0001.jpg",
+    skills: ["Data Management", "Data Analysis", "Data Visualization", "Data Science"],
+    tools: ["Microsoft Excel", "SQL", "Python", "Databases"],
+    category: "Certification",
+    githubUrl: "https://coursera.org/share/90cff9e5abd475caed27b2a4b65d6491"
+  },
+  {
     id: "alteryx-cert",
     title: "Introduction to Alteryx",
     shortDescription: "DataCamp certification in Alteryx data analytics platform fundamentals",
@@ -179,6 +196,22 @@ const projects: Project[] = [
     tools: ["Alteryx Designer", "DataCamp", "Data Transformation"],
     category: "Certification",
     githubUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/67a5d60c361881c9dbcda2661bc5a82cacaa7079"
+  },
+  {
+    id: "sql-basic-cert",
+    title: "SQL (Basic) - HackerRank",
+    shortDescription: "Earned HackerRank certification demonstrating SQL fundamentals proficiency",
+    fullDescription: [
+      "Successfully passed HackerRank's SQL Basic certification test, validating fundamental database querying skills.",
+      "Demonstrated proficiency in core SQL concepts including SELECT statements, filtering with WHERE clauses, and data manipulation.",
+      "Mastered skills in joining tables, aggregating data with GROUP BY, and implementing filtering with HAVING clauses.",
+      "Received official certification from HackerRank on January 22, 2024, confirming practical SQL skills for data retrieval and analysis."
+    ],
+    image: "/images/sql_basic certificate_page-0001.jpg",
+    skills: ["Database Querying", "Data Filtering", "Data Aggregation", "Table Joins"],
+    tools: ["SQL", "HackerRank", "Database Management"],
+    category: "Certification",
+    githubUrl: "https://www.hackerrank.com/certificates/0cb9ea0bbc24"
   }
   //
   // Other projects remain the same but with slightly shorter descriptions
