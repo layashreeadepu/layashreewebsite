@@ -148,7 +148,24 @@ const projects: Project[] = [
     skills: ["Statistical Analysis", "Data Modeling", "Correlation Analysis", "Educational Data"],
     tools: ["Statistical Software", "Regression Analysis", "Kaggle", "Data Visualization"],
     category: "Project"
+  },
+  {
+    id: "powerbi-certification",
+    title: "Microsoft Certified: Power BI Data Analyst Associate",
+    shortDescription: "Validated expertise in data visualization, modeling, and actionable insights with Power BI",
+    fullDescription: [
+      "Earned official certification from Microsoft, demonstrating proficiency in using Power BI for creating data models, dashboards, and reports.",
+      "Covered skills include data preparation, modeling, visualization, analysis, and deploying solutions for performance monitoring.",
+      "Projects included analyzing large datasets, building DAX-based KPIs, and delivering compelling dashboards for business decisions.",
+      "Certification involved hands-on labs and real-world case-based scenarios aligned with enterprise data analysis needs."
+    ],
+    image: "/images/Credentials - layashreeadepu-7008 _ Microsoft Learn.jpggit push origin ", // You can customize this path
+    githubUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LayashreeAdepu-7008/5D6B2FF8C129EAEE?sharingId=E191298D530BA3E5", // or link to your Credly badge
+    skills: ["Data Visualization", "DAX", "Data Modeling", "Business Intelligence"],
+    tools: ["Power BI", "Microsoft Excel", "DAX Studio", "Azure"],
+    category: "Certification"
   }
+  
   // Other projects remain the same but with slightly shorter descriptions
   // ...
 ];
@@ -185,7 +202,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="section-heading text-center mb-6">
-          Projects adn Certifications
+          Projects and Certifications
         </h2>
         
         {/* Decorative line */}
