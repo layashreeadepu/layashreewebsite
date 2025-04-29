@@ -80,34 +80,34 @@ export function ContactSection() {
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-primary mr-3" />
                     <a
-                      href="mailto:adepu.l@northeastern.edu"
+                      href="mailto:layashreeadepu1@gmail.com"
                       className="text-foreground hover:text-primary transition-colors"
                     >
-                      adepu.l@northeastern.edu
+                      layashreeadepu1@gmail.com
                     </a>
                   </div>
 
                   <div className="flex items-center">
                     <Linkedin className="h-5 w-5 text-primary mr-3" />
                     <a
-                      href="https://www.linkedin.com/in/layashree-adepu"
+                      href="https://www.linkedin.com/in/layashreeadepu"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground hover:text-primary transition-colors"
                     >
-                      linkedin.com/in/layashree-adepu
+                      linkedin.com/in/layashreeadepu
                     </a>
                   </div>
 
                   <div className="flex items-center">
                     <Github className="h-5 w-5 text-primary mr-3" />
                     <a
-                      href="https://github.com/layashree"
+                      href="https://github.com/layashreeadepu"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground hover:text-primary transition-colors"
                     >
-                      github.com/layashree
+                      github.com/layashreeadepu
                     </a>
                   </div>
 
