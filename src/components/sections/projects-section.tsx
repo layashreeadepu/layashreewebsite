@@ -32,7 +32,7 @@ const projects: Project[] = [
       "Created a system with tables, triggers, functions, and indexes for fast data retrieval and transaction processing."
     ],
     image: "/images/ChatGPT Image Apr 27, 2025, 10_30_3412 PM.png",
-    githubUrl: "https://github.com/yourusername/organ-donation-db",
+    githubUrl: "https://github.com/layashreeadepu/Organ-Donation-Database-Design",
     skills: ["Database Design", "SQL", "Optimization", "Healthcare"],
     tools: ["MS SQL Server", "Power BI"],
     category: "Project"
@@ -63,10 +63,90 @@ const projects: Project[] = [
       "Conducted comprehensive trend analysis across major occupational sectors (2005-2022), revealing significant shifts in Management, Service, and Military roles.",
       "Developed time series forecasting models predicting 5-year employment trends (2023-2027), showing Management roles stabilizing at 120,000/year and Military positions tripling from recent levels."
     ],
-    image: "/images/immigrants-insights.jpg",
-    githubUrl: "https://github.com/yourusername/Immigrant-Job-Insights",
+    image: "/images/ChatGPT Image Apr 27, 2025, 11_16_03 PM.png",
+    githubUrl: "https://github.com/layashreeadepu/Imigrant-Insights",
     skills: ["Data Engineering", "Web Scraping", "Time Series Analysis", "Visualization"],
     tools: ["Python", "Selenium", "Pandas", "Forecasting Models"],
+    category: "Project"
+  },
+  {
+    id: "city-metrics",
+    title: "City Metrics Analysis Dashboard",
+    shortDescription: "Analyzed urban operational metrics to improve public service delivery",
+    fullDescription: [
+      "Processed and analyzed comprehensive city operational data covering crime metrics, emergency services, and public works to identify performance trends and service gaps.",
+      "Implemented thorough data cleaning procedures including null value removal, temporal data filtering, and duplicate elimination to ensure dataset integrity across multiple service categories.",
+      "Discovered critical operational efficiency gaps in streetlight maintenance and EMS response times, along with seasonal inconsistencies in trash pickup and snow removal services.",
+      "Developed time-based analysis revealing peak incident periods during morning (7 AM) and evening (6 PM) commutes, providing actionable insights for resource allocation and service improvement."
+    ],
+    image: "/images/ChatGPT Image Apr 27, 2025, 11_25_54 PM.png",
+    githubUrl: "https://github.com/layashreeadepu/Boston-City-Score-Analysis",
+    skills: ["Data Cleaning", "Trend Analysis", "Metric Classification", "Visualization"],
+    tools: ["Python", "Pandas", "NumPy", "Matplotlib"],
+    category: "Project"
+  },
+  {
+    id: "facelink-connect",
+    title: "Facelink Connect - Networking Platform",
+    shortDescription: "Developed facial recognition solution for seamless event networking",
+    fullDescription: [
+      "Led a product development initiative to create a facial recognition-based networking platform that eliminates manual contact exchange at professional events.",
+      "Conducted comprehensive user research by developing detailed personas including project managers, program managers, and aspiring entrepreneurs to identify specific unmet networking needs.",
+      "Analyzed competing solutions (Whova, Bizzabo, Grip) to establish key competitive advantages through facial recognition technology that eliminates QR codes and manual data entry.",
+      "Implemented privacy-focused design principles to ensure secure data storage and compliance with data protection regulations while maintaining seamless user experience."
+    ],
+    image: "/images/ChatGPT Image Apr 28, 2025, 10_08_55 AM.png",
+    githubUrl: "https://github.com/layashreeadepu/Face-Link-Connect",
+    skills: ["Product Development", "User Research", "Competitive Analysis", "Privacy Design"],
+    tools: ["Persona Creation", "Market Research", "Requirements Documentation", "User Journey Maps"],
+    category: "Project"
+  },
+  {
+    id: "bikeshare-warehouse",
+    title: "BikeShare Data Warehouse Project",
+    shortDescription: "Designed comprehensive data warehouse for bike-sharing service using Talend and Azure",
+    fullDescription: [
+      "Designed and implemented a complex data warehouse with detailed Entity Relationship Diagram (ERD) featuring key entities like Users, Trips, Bikes, Stations, and Weather to enable multi-dimensional analytics.",
+      "Developed ETL processes using Talend to integrate multiple data sources including bike usage, weather, payments, maintenance, and user feedback into a centralized on-premise data warehouse.",
+      "Planned migration strategy to Azure Cloud leveraging services like Azure Data Factory, Azure Synapse Analytics, and Azure SQL Database to enhance scalability and real-time analytics capabilities.",
+      "Implemented comprehensive dimensional modeling with hierarchies across User Type, Time, Location, and Equipment dimensions to support interactive dashboards providing insights on usage patterns, maintenance needs, and financial performance."
+    ],
+    image: "/images/ChatGPT Image Apr 28, 2025, 09_42_48 PM.png",
+    githubUrl: "https://github.com/layashreeadepu/BikeFlow-Analytics",
+    skills: ["Data Warehouse Design", "ETL Development", "Cloud Migration", "Dimensional Modeling"],
+    tools: ["Talend", "Azure Data Factory", "Azure Synapse", "PostgreSQL"],
+    category: "Project"
+  },
+  {
+    id: "diabetes-prediction",
+    title: "Diabetes Prediction ML System",
+    shortDescription: "Developed machine learning models to predict diabetes risk using health indicators",
+    fullDescription: [
+      "Implemented and compared multiple machine learning models (Decision Trees, Random Forest, Naive Bayes, PCA, Neural Networks) to predict diabetes status based on health and lifestyle indicators.",
+      "Conducted comprehensive exploratory data analysis using correlation heatmaps, boxplots, and bar charts to identify strong predictors of diabetes among demographic, behavioral, and clinical health factors.",
+      "Applied feature engineering and scaling techniques to optimize model performance across a dataset of over 253,000 individuals from CDC and Kaggle sources.",
+      "Determined that Neural Networks achieved the best recall and F1-score for early diabetes detection, providing valuable insights for healthcare systems and preventive management strategies."
+    ],
+    image: "/images/ChatGPT Image Apr 28, 2025, 10_12_55 PM.png",
+    githubUrl: "https://github.com/layashreeadepu/Predicting-Diabetes-Using-Health-Indicators",
+    skills: ["Machine Learning", "Data Analysis", "Feature Engineering", "Healthcare Analytics"],
+    tools: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
+    category: "Project"
+  },
+  {
+    id: "student-equation",
+    title: "Student Equation: Academic Performance Analysis",
+    shortDescription: "Analyzed impact of social, psychological and physiological factors on academic success",
+    fullDescription: [
+      "Developed a statistical framework to investigate correlations between social support, anxiety, sleep quality and academic performance using student mental health and lifestyle data.",
+      "Structured and categorized features into four distinct domains (social, psychological, physiological, environmental) to create a comprehensive analysis model for student success factors.",
+      "Applied multiple statistical techniques including descriptive statistics, correlation analysis, and linear regression to quantify the influence of various factors on GPA and academic outcomes.",
+      "Discovered significant relationships between social support and GPA, anxiety and performance degradation, and sleep quality and cognitive function, providing insights for data-informed educational interventions."
+    ],
+    image: "/images/ChatGPT Image Apr 29, 2025, 12_15_19 PM.png",
+    githubUrl: "https://github.com/layashreeadepu/The-Student-Equation",
+    skills: ["Statistical Analysis", "Data Modeling", "Correlation Analysis", "Educational Data"],
+    tools: ["Statistical Software", "Regression Analysis", "Kaggle", "Data Visualization"],
     category: "Project"
   }
   // Other projects remain the same but with slightly shorter descriptions
@@ -105,7 +185,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="section-heading text-center mb-6">
-          Portfolio
+          Projects adn Certifications
         </h2>
         
         {/* Decorative line */}
@@ -133,7 +213,7 @@ export function ProjectsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {filteredProjects.map((project) => (
             <motion.div key={project.id} variants={cardVariants}>
