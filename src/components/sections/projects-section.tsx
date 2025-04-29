@@ -164,8 +164,23 @@ const projects: Project[] = [
     skills: ["Data Visualization", "DAX", "Data Modeling", "Business Intelligence"],
     tools: ["Power BI", "Microsoft Excel", "DAX Studio", "Azure"],
     category: "Certification"
+  },{
+    id: "alteryx-cert",
+    title: "Introduction to Alteryx",
+    shortDescription: "DataCamp certification in Alteryx data analytics platform fundamentals",
+    fullDescription: [
+      "Completed comprehensive training in Alteryx fundamentals, gaining skills in data preparation, blending, and analytics workflow design.",
+      "Learned how to build efficient data transformation workflows using Alteryx's drag-and-drop interface for streamlined analytics processes.",
+      "Developed proficiency in data cleansing, joining diverse data sources, and performing basic analytics operations within the Alteryx environment.",
+      "Earned official certification from DataCamp, validating expertise in using Alteryx for data preparation and analysis tasks."
+    ],
+    image: "/images/Introduction to Alteryx_page-0001.jpg",
+    skills: ["Data Preparation", "Workflow Design", "Data Blending", "Analytics Automation"],
+    tools: ["Alteryx Designer", "DataCamp", "Data Transformation"],
+    category: "Certification",
+    githubUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/67a5d60c361881c9dbcda2661bc5a82cacaa7079"
   }
-  
+  //
   // Other projects remain the same but with slightly shorter descriptions
   // ...
 ];
