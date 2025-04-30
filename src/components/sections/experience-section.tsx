@@ -41,10 +41,10 @@ const experiences: ExperienceItem[] = [
     location: "Mumbai, India",
     period: "Jan 2021 - Aug 2023",
     description: [
-      "Delivered data-driven insights for regulatory audits and risk mitigation for a major financial sector client, enhancing compliance reporting efficiency by 30% through advanced data analysis and automated BI reporting frameworks",
       "Wrote Python scripts using pandas and statsmodels to perform ETL on unstructured PDF data tables into schema-aligned CSV/XLSX formats, enabling seamless Talend ingestion and accelerating readiness by 90%",
       "Developed standardised ETL pipelines for 100+ tables with Talend for Change Data Capture (SCD Type 2) across schemas, achieving 80% reduction in job-building time while improving data lineage tracking",
       "Constructed scalable data pipelines for 600+ tables using Talend, implementing data validation checks while migrating diverse data sources including Oracle, MySQL, and JSON into Hive for unified business intelligence",
+      "Built an automated Python and MySQL to Hive data migration solution that analysed 20+ weekly datasets, resulting in 75% decreased processing time and enabling real-time business intelligence reporting",
       "Optimized complex analytical SQL queries on Impala/Hive processing 100M+ daily records while managing end-to-end table operations, resulting in 35% increased operational efficiency and 45% faster data validation",
       "Spearheaded sprint planning with customers & stakeholders using analytical metrics and preliminary CRM mapping, boosting workflow efficiency by 40% and reducing project deliverables timeline",
       "Authored 30+ Data Dictionaries & SOPs with detailed metadata analysis, standardising data definitions across teams and mitigating interpretation errors by 25% across all development environments",
