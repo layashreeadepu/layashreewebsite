@@ -183,54 +183,67 @@ export function SkillsSection() {
           onValueChange={setActiveCategory}
           className="w-full"
         >
-          <TabsList className="flex overflow-x-auto whitespace-nowrap no-scrollbar mb-10 bg-transparent">
-            {skillsData.map((category) => (
-              <TabsTrigger
-                key={category.category}
-                value={category.category}
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-              >
-                {category.category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <TabsList
+          className="flex overflow-x-auto whitespace-nowrap mb-6 bg-transparent px-4 scroll-smooth
+                    sm:overflow-x-visible sm:whitespace-normal no-scrollbar"
+        >
+          {skillsData.map((category) => (
+            <TabsTrigger
+              key={category.category}
+              value={category.category}
+              className="flex-shrink-0 px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              {category.category}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+
 
           <motion.div
-            ref={ref}
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="rounded-lg p-6 bg-background/50 backdrop-blur-sm border border-border/50"
-          >
-            {skillsData
-            .find(cat => cat.category === activeCategory)
-            ?.skills.map((skill) => (
-              <motion.div
-                key={`${activeCategory}-${skill.name}`}
-                variants={skillVariants}
-                title={skill.description}
-                className="relative group"
-              >
-                <Badge
-                  variant="secondary"
-                  className="px-4 py-2 text-base transition-colors card-hover cursor-help bg-primary text-white"
-                >
-                  {skill.name}
-                </Badge>
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="rounded-lg p-6 bg-background/50 backdrop-blur-sm border border-border/50"
+        >
+          {skillsData.map((category) => (
+            <TabsContent key={category.category} value={category.category} className="mt-0">
+              <Card className="border-none bg-transparent shadow-none">
+                <CardContent className="p-0">
+                  <div className="flex flex-wrap gap-3 justify-start sm:justify-center">
+                    {category.skills.map((skill) => (
+                      <motion.div
+                        key={`${category.category}-${skill.name}`}
+                        variants={skillVariants}
+                        title={skill.description}
+                        className="relative group"
+                      >
+                        <Badge
+                          variant="secondary"
+                          className="px-4 py-2 text-base transition-colors card-hover cursor-help bg-primary text-white w-fit"
+                        >
+                          {skill.name}
+                        </Badge>
 
-                <div className="absolute -top-2 -right-2 transform scale-0 group-hover:scale-100 transition-transform origin-bottom-left">
-                  <span className="flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                  </span>
-                </div>
-                <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur"></div>
-                </div>
-              </motion.div>
+                        <div className="absolute -top-2 -right-2 transform scale-0 group-hover:scale-100 transition-transform origin-bottom-left">
+                          <span className="flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                          </span>
+                        </div>
+                        <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur"></div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
           ))}
+        </motion.div>
 
-          </motion.div>
+
         </Tabs>
       </div>
     </section>
