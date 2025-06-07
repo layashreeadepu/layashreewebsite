@@ -211,9 +211,9 @@ export function SkillsSection() {
               <Card className="border-none bg-transparent shadow-none">
                 <CardContent className="p-0">
                   <div className="flex flex-wrap gap-3 justify-start sm:justify-center">
-                    {category.skills.map((skill) => (
+                    {category.skills.map((skill, index) => (
                       <motion.div
-                        key={`${category.category}-${skill.name}`}
+                        key={`${category.category}-${skill.name}-${index}`}
                         variants={skillVariants}
                         title={skill.description}
                         className="relative group"
@@ -242,8 +242,6 @@ export function SkillsSection() {
             </TabsContent>
           ))}
         </motion.div>
-
-
         </Tabs>
       </div>
     </section>
