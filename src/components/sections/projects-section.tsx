@@ -149,6 +149,23 @@ const projects: Project[] = [
     tools: ["Statistical Software", "Regression Analysis", "Kaggle", "Data Visualization"],
     category: "Project"
   },
+    {
+  id: "er-performance",
+  title: "Emergency Room Performance Monitor",
+  shortDescription: "Built interactive Power BI dashboard to track ER operations and referral dynamics",
+  fullDescription: [
+    "Delivered a full-scale Power BI solution to enhance real-time monitoring and operational efficiency across hospital emergency departments.",
+    "Mapped end-to-end ER patient flow—from arrival to discharge or referral—capturing delays and process gaps using timeliness metrics.",
+    "Implemented demographic breakdowns (age, gender, race) to assess equity and patient experience in emergency care delivery.",
+    "Designed dynamic filters for time-of-day, month, and department-level analytics, enabling hospital leaders to respond faster to patient surges and bottlenecks.",
+    "Enabled strategic KPIs including admission/discharge rates, peak-hour clustering, and referral volume trends by department."
+  ],
+  image: "/images/Screenshot 2025-06-07 173914.png",
+  githubUrl: "https://github.com/layashreeadepu/Emergency-Room-Performance-Monitor",
+  skills: ["Healthcare Analytics", "Data Storytelling", "KPI Design", "Referral Tracking"],
+  tools: ["Power BI", "Excel", "Gamma App"],
+  category: "Project"
+  },
   {
     id: "powerbi-certification",
     title: "Microsoft Certified: Power BI Data Analyst Associate",
