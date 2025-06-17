@@ -44,15 +44,15 @@ interface ExperienceItem {
             title: "Data Engineer",
             period: "Apr 2021 – Aug 2023",
             description: [
-                "Wrote Python scripts using pandas and statsmodels to perform ETL on unstructured PDF data tables into schema-aligned CSV/XLSX formats, enabling seamless Talend ingestion and accelerating readiness by 90%",
-                "Developed standardised ETL pipelines for 100+ tables with Talend for Change Data Capture (SCD Type 2) across schemas, achieving 80% reduction in job-building time while improving data lineage tracking",
-                "Constructed scalable data pipelines for 600+ tables using Talend, implementing data validation checks while migrating diverse data sources including Oracle, MySQL, and JSON into Hive for unified business intelligence",
-                "Built an automated Python and MySQL to Hive data migration solution that analysed 20+ weekly datasets, resulting in 75% decreased processing time and enabling real-time business intelligence reporting",
-                "Optimized complex analytical SQL queries on Impala/Hive processing 100M+ daily records while managing end-to-end table operations, resulting in 35% increased operational efficiency and 45% faster data validation",
-                "Spearheaded sprint planning with customers & stakeholders using analytical metrics and preliminary CRM mapping, boosting workflow efficiency by 40% and reducing project deliverables timeline",
-                "Authored 30+ Data Dictionaries & SOPs with detailed metadata analysis, standardising data definitions across teams and mitigating interpretation errors by 25% across all development environments",
-                "Received TCS 'Star of the Month' Award for leading a cross-functional data migration initiative and mentoring 8 junior analysts, improving delivery velocity by 30% and standardising onboarding practices"
-              ],
+            "Designed and implemented a scalable data migration framework using Talend to transition legacy RDBMS sources into a centralized Hive Data Warehouse, resulting in a 40% improvement in migration efficiency"
+            "Improved data processing efficiency by 30% and enhanced accessibility by implementing Type-2 SCD logic in Hive, optimizing partition strategies, and managing Spark cluster resources to resolve performance bottlenecks in data pipelines"
+            "Automated job scheduling for complex data pipelines using Talend Administration Center (TAC), addressing inefficiencies in manual orchestration and improving resource allocation for operations, resulting in a 15% boost in efficiency"
+            "Spearheaded a cross-functional data migration team, mentoring 3 junior analysts and establishing standardized onboarding practices, which accelerated delivery timelines by 25% and improved team efficiency across multiple environments"
+            "Optimized complex SQL queries for data retrieval, reducing execution time by 39% and boosting performance"
+            "Authored 30+ Data Dictionaries and SOPs, standardizing data definitions and mitigating errors by 25%"
+            "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%"
+ 
+            ],
               skills: ["Python", "ETL", "Talend", "SQL", "Hadoop", "Hive"]
           },
           {
