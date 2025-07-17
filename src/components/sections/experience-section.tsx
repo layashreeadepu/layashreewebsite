@@ -42,7 +42,7 @@ interface ExperienceItem {
         roles: [
           {
             title: "Data Engineer",
-            period: "Apr 2021 – Aug 2023",
+            period: "September 2020 – Aug 2023",
             description: [
             "Designed and implemented a scalable data migration framework using Talend to transition legacy RDBMS sources into a centralized Hive Data Warehouse, resulting in a 40% improvement in migration efficiency"
             "Improved data processing efficiency by 30% and enhanced accessibility by implementing Type-2 SCD logic in Hive, optimizing partition strategies, and managing Spark cluster resources to resolve performance bottlenecks in data pipelines"
@@ -54,17 +54,6 @@ interface ExperienceItem {
  
             ],
               skills: ["Python", "ETL", "Talend", "SQL", "Hadoop", "Hive"]
-          },
-          {
-            title: "BI Developer",
-            period: "",
-            description: [
-              "Collaborated with AMS teams to define 20+ KPIs and SLAs from ServiceNow ITSM data, laying the foundation for automated Power BI dashboards that tracked service trends and improved reporting turnaround time by 60%",
-              "Developed mock Power BI dashboards based on business requirements and delivered them across sprint cycles, enabling early stakeholder alignment and reducing final redesign iterations by 70% through continuous validation",
-              "Designed DAX measures and Power Query logic to build auto-refreshed Power BI dashboards with email alerts, enabling SLA tracking and saving TCS from 100% of penalty payouts due to delayed reports",
-              "Conducted performance optimization of Power BI datasets using query folding and data model tuning, reducing dashboard load time by 50% and enhancing user experience across stakeholder teams"
-            ],
-            skills: ["Data Modelling, Power BI, Data Visualization"]
           }
         ]
       },
