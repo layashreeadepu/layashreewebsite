@@ -42,7 +42,7 @@ interface ExperienceItem {
         roles: [
           {
             title: "Data Engineer",
-            period: "September 2020 – Aug 2023",
+            period: "Sep 2020 – Aug 2023",
             description: [
             "Designed and implemented a scalable data migration framework using Talend to transition legacy RDBMS sources into a centralized Hive Data Warehouse, resulting in a 40% improvement in migration efficiency"
             "Improved data processing efficiency by 30% and enhanced accessibility by implementing Type-2 SCD logic in Hive, optimizing partition strategies, and managing Spark cluster resources to resolve performance bottlenecks in data pipelines"
