@@ -117,7 +117,7 @@ const skillVariants = {
 export function SkillsSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
-  const [activeCategory, setActiveCategory] = useState("Programming Languages")
+  const [activeCategory, setActiveCategory] = useState("All")
 
   return (
     <section id="skills" className="py-20 bg-secondary/20">
@@ -125,11 +125,17 @@ export function SkillsSection() {
         <h2 className="section-heading text-center mb-12">Technical Skills</h2>
 
         <Tabs
-          defaultValue="Programming Languages"
+          defaultValue="All"
           onValueChange={setActiveCategory}
           className="w-full"
         >
           <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8 bg-transparent">
+            <TabsTrigger
+              value="All"
+              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              All
+            </TabsTrigger>
             {skillsData.map((category) => (
               <TabsTrigger
                 key={category.category}
@@ -148,6 +154,41 @@ export function SkillsSection() {
             animate={isInView ? "visible" : "hidden"}
             className="rounded-lg p-6 bg-background/50 backdrop-blur-sm border border-border/50"
           >
+            <TabsContent value="All" className="mt-0">
+              <Card className="border-none bg-transparent shadow-none">
+                <CardContent className="p-0">
+                  <div className="flex flex-wrap gap-3">
+                    {skillsData.flatMap((category) =>
+                      category.skills.map((skill) => (
+                        <motion.div
+                          key={`All-${skill.name}`}
+                          variants={skillVariants}
+                          title={skill.description}
+                          className="relative group"
+                        >
+                          <Badge
+                            variant="secondary"
+                            className="px-4 py-2 text-base bg-secondary/80 hover:bg-primary/20 transition-colors card-hover cursor-help"
+                          >
+                            {skill.name}
+                          </Badge>
+                          <div className="absolute -top-2 -right-2 transform scale-0 group-hover:scale-100 transition-transform origin-bottom-left">
+                            <span className="flex h-3 w-3">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
+                              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                            </span>
+                          </div>
+                          <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur"></div>
+                          </div>
+                        </motion.div>
+                      ))
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
             {skillsData.map((category) => (
               <TabsContent key={category.category} value={category.category} className="mt-0">
                 <Card className="border-none bg-transparent shadow-none">
