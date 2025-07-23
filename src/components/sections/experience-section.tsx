@@ -44,12 +44,12 @@ interface ExperienceItem {
             title: "Data Engineer",
             period: "Sep 2020 – Aug 2023",
             description: [
-            "Designed and implemented a scalable data migration framework using Talend to transition legacy RDBMS sources into a centralized Hive Data Warehouse, resulting in a 40% improvement in migration efficiency"
-            "Improved data processing efficiency by 30% and enhanced accessibility by implementing Type-2 SCD logic in Hive, optimizing partition strategies, and managing Spark cluster resources to resolve performance bottlenecks in data pipelines"
-            "Automated job scheduling for complex data pipelines using Talend Administration Center (TAC), addressing inefficiencies in manual orchestration and improving resource allocation for operations, resulting in a 15% boost in efficiency"
-            "Spearheaded a cross-functional data migration team, mentoring 3 junior analysts and establishing standardized onboarding practices, which accelerated delivery timelines by 25% and improved team efficiency across multiple environments"
-            "Optimized complex SQL queries for data retrieval, reducing execution time by 39% and boosting performance"
-            "Authored 30+ Data Dictionaries and SOPs, standardizing data definitions and mitigating errors by 25%"
+            "Designed and implemented a scalable data migration framework using Talend to transition legacy RDBMS sources into a centralized Hive Data Warehouse, resulting in a 40% improvement in migration efficiency",
+            "Improved data processing efficiency by 30% and enhanced accessibility by implementing Type-2 SCD logic in Hive, optimizing partition strategies, and managing Spark cluster resources to resolve performance bottlenecks in data pipelines",
+            "Automated job scheduling for complex data pipelines using Talend Administration Center (TAC), addressing inefficiencies in manual orchestration and improving resource allocation for operations, resulting in a 15% boost in efficiency",
+            "Spearheaded a cross-functional data migration team, mentoring 3 junior analysts and establishing standardized onboarding practices, which accelerated delivery timelines by 25% and improved team efficiency across multiple environments",
+            "Optimized complex SQL queries for data retrieval, reducing execution time by 39% and boosting performance",
+            "Authored 30+ Data Dictionaries and SOPs, standardizing data definitions and mitigating errors by 25%",
             "Delivered continuous testing and support for workflow pipelines, reducing client-reported issues by 30%"
  
            ],
